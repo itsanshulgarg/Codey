@@ -28,7 +28,7 @@ class CodeView: UIViewController {
         textStorage = CodeAttributedString()
         highlightr = textStorage.highlightr
         textStorage.highlightr.setTheme(to: defaults.string(forKey: "theme") ?? "vs")
-        textStorage.language = "Python"
+        textStorage.language = "C++"
         
         let layoutManager = NSLayoutManager()
         self.textStorage.addLayoutManager(layoutManager)
@@ -56,7 +56,7 @@ class CodeView: UIViewController {
     compileButton.isEnabled = false
     
     let codeDB = Database.database().reference().child("Code")
-    let codeDictionary = ["sender": Auth.auth().currentUser?.email, "codeBody": textView?.text!, "language": "Python"]
+    let codeDictionary = ["sender": Auth.auth().currentUser?.email, "codeBody": textView?.text!, "language": "C++"]
     
     codeDB.childByAutoId().setValue(codeDictionary) {
                (error, reference) in

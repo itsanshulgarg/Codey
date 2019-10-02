@@ -82,7 +82,6 @@
 		6D331F292345066400B54F6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6D471FBF2332D11300B65E67 /* Info.plist */,
 				6D471FB72332D11300B65E67 /* Codey.xcdatamodeld */,
 				6D471FBC2332D11300B65E67 /* LaunchScreen.storyboard */,
 			);
@@ -114,6 +113,7 @@
 				6D471FBA2332D11300B65E67 /* Assets.xcassets */,
 				6D331F282345064B00B54F6C /* View */,
 				6D331F222343C74D00B54F6C /* GoogleService-Info.plist */,
+				6D471FBF2332D11300B65E67 /* Info.plist */,
 				6D331F292345066400B54F6C /* Supporting Files */,
 			);
 			path = Codey;
