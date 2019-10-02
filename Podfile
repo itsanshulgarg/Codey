@@ -9,5 +9,6 @@ target 'Codey' do
     pod 'Highlightr'
     pod 'Firebase/Auth'
     pod 'Firebase/Core'
+    pod 'Firebase/Database'
     pod 'Firebase/Analytics'
 end
