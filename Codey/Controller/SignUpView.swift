@@ -25,7 +25,9 @@ class SignUpView : UIViewController, UITextFieldDelegate{
     @IBAction func signUpAction(_ sender: Any) {
     if password.text != passwordConfirm.text {
     let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
-    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    let defaultAction = UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+    NSLog("The \"OK\" alert occured.")
+    }) 
                 
     alertController.addAction(defaultAction)
     self.present(alertController, animated: true, completion: nil)
@@ -36,10 +38,12 @@ class SignUpView : UIViewController, UITextFieldDelegate{
        self.performSegue(withIdentifier: "signUpToHome", sender: self)
        }
     else{
-        let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        })
+            alert.addAction(defaultAction)
+            self.present(alert, animated: true, completion: nil)
                       }
                   }
               }
